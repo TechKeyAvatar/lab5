@@ -4,7 +4,65 @@
   <meta charset="utf-8">
   <title>Skeleton</title>
 </head>
+
+<!--
+$firstName = $_REQUEST['first_name_field'];
+$lastName = $_REQUEST['last_name_field'];
+$phone = $_REQUEST['phone_field'];
+$email = $_REQUEST['email_field'];
+$hidden = $_REQUEST['hidden_field'];
+$comments = $_REQUEST['comments_field'];
+$gender = $_REQUEST['gender_field'];
+$available = $_REQUEST['available_field'];
+$age = $_REQUEST['age_field'];
+-->
+
 <body>
-  <p>&amp; Hello world. This is the Skeleton!</p>
+  <h1>Volunteer Form</h1>
+  <form method="post" action="http://bloomingdale.sat.iit.edu/kriedan/lab3formscript.php">
+
+    <fieldset><legend>My info</legend>
+      <table>
+        <tr><td><label>first name:<input type="text" name="first_name_field" maxlength="20"> </label></td></tr>
+        <tr><td><label>last name:<input type="text" name="last_name_field" maxlength="20"> </label></td></tr>
+        <tr><td><label>phone:<input type="text" name="phone_field" maxlength="20"> </label></td></tr>
+        <tr><td><label>email:<input type="text" name="email_field" maxlength="20"> </label></td></tr>
+
+        <tr><td>Gender:</td></tr>
+        <tr><td>
+          <label>Male:<input type="radio" name="gender_field" value="m"></label>
+          <label>Female:<input type="radio" name="gender_field" value="f"></label>
+        </td></tr>
+
+        <tr><td>Age:</td></tr>
+        <tr><td>
+          <select name="age_field">
+            <option value="u">under 18</option>
+            <option value="o">over 18</option>
+          </select>
+        </td></tr>
+      </table>
+    </fieldset>
+
+    <fieldset><legend>My availability</legend>
+      <h2>Days Available:</h2>
+      <table>
+        <tr><td><label>Sunday<input type="checkbox" name="available_field[]" value="sun"></label></td></tr>
+        <tr><td><label>Monday<input type="checkbox" name="available_field[]" value="mon"></label></td></tr>
+        <tr><td><label>Tuesday<input type="checkbox" name="available_field[]" value="tue"></label></td></tr>
+        <tr><td><label>Wednesday<input type="checkbox" name="available_field[]" value="wed"></label></td></tr>
+        <tr><td><label>Thursday<input type="checkbox" name="available_field[]" value="thu"></label></td></tr>
+        <tr><td><label>Friday<input type="checkbox" name="available_field[]" value="fri"></label></td></tr>
+        <tr><td><label>Saturday<input type="checkbox" name="available_field[]" value="sat"></label></td></tr>
+      </table>
+      
+      <h2>Comments</h2>
+      <textarea name="comments_field" cols="20" rows="3"></textarea>
+    </fieldset>
+
+    <input type="hidden" name="hidden_field" value="Arnold Szarka">
+    <input type="submit" value="Submit Query">
+  </form>
+
 </body>
 </html>
